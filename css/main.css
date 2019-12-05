@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  background: #243457;
+}
+.navbar {
+  background: #1c2842;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.control-buttons {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 75px;
+}
+.control-button {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.control-button-maximize {
+  background: linear-gradient(to right, #1de92e, #70c978);
+}
+.control-button-minimize {
+  background: linear-gradient(to right, #ffd900, #ffd900);
+}
+.control-button-exit {
+  background: linear-gradient(to right, #ff4800, #ff7c7c);
+}
