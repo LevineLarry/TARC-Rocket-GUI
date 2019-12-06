@@ -17,14 +17,21 @@
   <body>
     <div class="container">
       <div class="navbar">
+        <div class="dropdown">
+          <button onclick="showDropdown(event.path[0])" class="dropbtn">Test</button>
+          <div id="testDropdown" class="dropdown-content">
+            <a href="#">BIT 1</a>
+          </div>
+        </div>
         <div class="control-buttons">
-          <div class="control-button control-button-maximize" id="maximizebtn"></div>
           <div class="control-button control-button-minimize" id="minimizebtn"></div>
+          <div class="control-button control-button-maximize" id="maximizebtn"></div>
           <div class="control-button control-button-exit" id="exitbtn"></div>
         </div>
       </div>
     </div>
     <script src="js/index-render.js" async defer></script>
     <script src="js/control-btns.js" async defer></script>
+    <script src="js/dropdown.js" async defer></script>
   </body>
 </html>
