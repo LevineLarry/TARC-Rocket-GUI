@@ -16,18 +16,28 @@
   </head>
   <body>
     <div class="container">
-      <div class="navbar">
-        <div class="dropdown">
-          <button onclick="showDropdown(event.path[0])" class="dropbtn">Test</button>
-          <div id="testDropdown" class="dropdown-content">
-            <a href="#">BIT 1</a>
-          </div>
+      <div class="topbar">
+        <div class="title">
+          <h2>Ground Station</h2>
         </div>
         <div class="control-buttons">
           <div class="control-button control-button-minimize" id="minimizebtn"></div>
           <div class="control-button control-button-maximize" id="maximizebtn"></div>
           <div class="control-button control-button-exit" id="exitbtn"></div>
         </div>
+      </div>
+      <div class="navbar">
+        <!--div class="dropdown">
+          <button onclick="showDropdown(event.path[0])" class="dropbtn">Test</button>
+          <div id="testDropdown" class="dropdown-content">
+            <a href="#">BIT 1</a>
+            <a href="#">BIT 2</a>
+            <a href="#">BIT 3</a>
+          </div>
+        </div-->
+        <a>Tests</a>
+        <a>Telementry</a>
+        <a>Modify PID Values</a>
       </div>
     </div>
     <script src="js/index-render.js" async defer></script>

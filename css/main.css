@@ -14,14 +14,35 @@ html, body {
   flex-direction: column;
   background: #243457;
 }
-.navbar {
+.topbar {
   background: #1c2842;
+  margin: none;
   height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  -webkit-app-region: no-drag;
+}
+.navbar {
+  background: #182238;
+  margin: none;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   -webkit-app-region: drag;
+  box-shadow: 10px 0 5px #19233a;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 100%;
+  color: white;
+  font-size: 15px;
 }
 .control-buttons {
   margin-left: auto;

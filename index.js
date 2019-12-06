@@ -17,7 +17,7 @@ function createWindow()
     win.maximize()
     win.show()
   })
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 }
 
 ipcMain.on("asynchronous-message", (event, arg) => {
