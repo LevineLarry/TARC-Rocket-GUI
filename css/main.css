@@ -22,27 +22,52 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -webkit-app-region: no-drag;
-}
-.navbar {
-  background: #182238;
-  margin: none;
-  width: 250px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   -webkit-app-region: drag;
-  box-shadow: 10px 0 5px #19233a;
 }
-.title {
+.connectivity-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 250px;
   height: 100%;
   color: white;
   font-size: 15px;
+  margin-right: 30px;
+  border-right: 3px solid #141d30;
+}
+.connectivity-container h2 {
+  margin: 0px;
+  margin-left: 10px;
+}
+.connectivity-display {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bar1 {
+  border-radius: 50%;
+  width: 30px;
+  height: 20px;
+  border: 5px solid transparent;
+  border-top: 5px solid #1de71d;
+}
+.bar2 {
+  border-radius: 50%;
+  width: 15px;
+  height: 20px;
+  border: 5px solid transparent;
+  border-top: 5px solid #1de71d;
+  margin-top: -19px;
+}
+.bar3 {
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background: #1de71d;
+  margin-top: -19px;
 }
 .control-buttons {
   margin-left: auto;
@@ -107,3 +132,103 @@ html, body {
 }
 .dropdown-content a:hover {background-color: #ddd}
 .show {display: block;}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 70px;
+  color: white;
+}
+.title p {
+  margin: 0px;
+  margin-top: 10px;
+}
+.btn-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.connect-btn {
+  width: 300px;
+  height: 100px;
+  background: rgb(4, 144, 199);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+.connect-btn:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-container {
+  width: 50vw;
+  height: 80vh;
+  background: #243457;
+}
+.modal-title {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c2842;
+  border-bottom: 1px solid white;
+  font-size: 30px;
+  color: white;
+}
+.modal-title p {
+  margin-left: 15px;
+}
+.modal-close {
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 40px;
+}
+.modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+.network-select {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+}
+.network-select-row {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  flex-direction: row;
+  color: white;
+  background: #1c2842;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.network-select-row:hover {
+  background: #2a3f69;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}

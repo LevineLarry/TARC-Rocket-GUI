@@ -17,8 +17,37 @@
   <body>
     <div class="container">
       <div class="topbar">
-        <div class="title">
-          <h2>Ground Station</h2>
+        <div class="connectivity-container">
+          <h2 id="connectivityLabel">No Connection</h2>
+          <div class="connectivity-display">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="showDropdown(event.path[0])" class="dropbtn">Test</button>
+          <div id="testDropdown" class="dropdown-content">
+            <a href="#">BIT 1</a>
+            <a href="#">BIT 2</a>
+            <a href="#">BIT 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="showDropdown(event.path[0])" class="dropbtn">Telemetry</button>
+          <div id="testDropdown" class="dropdown-content">
+            <a href="#">BIT 1</a>
+            <a href="#">BIT 2</a>
+            <a href="#">BIT 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="showDropdown(event.path[0])" class="dropbtn">Modify PID</button>
+          <div id="testDropdown" class="dropdown-content">
+            <a href="#">BIT 1</a>
+            <a href="#">BIT 2</a>
+            <a href="#">BIT 3</a>
+          </div>
         </div>
         <div class="control-buttons">
           <div class="control-button control-button-minimize" id="minimizebtn"></div>
@@ -26,18 +55,28 @@
           <div class="control-button control-button-exit" id="exitbtn"></div>
         </div>
       </div>
-      <div class="navbar">
-        <!--div class="dropdown">
-          <button onclick="showDropdown(event.path[0])" class="dropbtn">Test</button>
-          <div id="testDropdown" class="dropdown-content">
-            <a href="#">BIT 1</a>
-            <a href="#">BIT 2</a>
-            <a href="#">BIT 3</a>
+      <div class="content">
+        <div class="title">
+          <p>Ground Station</p>
+        </div>
+        <div class="btn-container">
+          <div class="connect-btn">
+            Connect
           </div>
-        </div-->
-        <a>Tests</a>
-        <a>Telementry</a>
-        <a>Modify PID Values</a>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal-container">
+          <div class="modal-title">
+            <p>Select Rocket WIFI Network:</p>
+            <p class="modal-close" onclick="$('.modal').css('display','none');">&times;</p>
+          </div>
+          <div class="modal-content">
+            <h2>Networks:</h2>
+            <div class="network-select">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/index-render.js" async defer></script>

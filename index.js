@@ -1,7 +1,8 @@
 const electron = require("electron")
 const {app, BrowserWindow, ipcMain} = require("electron")
+var WiFiControl = require("wifi-control")
 
-let win
+let win, networks
 
 function createWindow()
 {
@@ -17,7 +18,24 @@ function createWindow()
     win.maximize()
     win.show()
   })
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
+}
+
+function setupWifi(event) {
+  WiFiControl.init({
+    debug: true
+  })
+  WiFiControl.scanForWiFi( function(err, response) {
+    if (err) console.log(err);
+    else {
+      networks = response.networks
+      event.sender.send("asynchronous-message", 
+      {
+        title: "getNetworks-Response", 
+        networks: networks
+      })
+    }
+  })
 }
 
 ipcMain.on("asynchronous-message", (event, arg) => {
@@ -31,6 +49,8 @@ ipcMain.on("asynchronous-message", (event, arg) => {
     case "exit":
       app.quit()
       break
+    case "getNetworks":
+      setupWifi(event)
   }
 })
 
